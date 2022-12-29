@@ -278,9 +278,9 @@ def ConceptualCaptions(args, smalldata=False, testset=False):
     :param testset: Whether to return the testing set (vs training/valid)
     :return: test_dataset if :code:`testset` else (train_dataset, valid_dataset)
     """
-    dset = load_dataset("conceptual_captions")
+    dset = load_dataset("minimagen/Aman_dataset.tsv")
     if smalldata:
-        num = 16
+        num = 8
         vi = dset['validation']['image_url'][:num]
         vc = dset['validation']['caption'][:num]
         ti = dset['train']['image_url'][:num]
